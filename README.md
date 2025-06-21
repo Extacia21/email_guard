@@ -32,48 +32,48 @@ Email Guard helps you track email opens by embedding invisible tracking pixels i
    cd email-guard
 2. Create and activate a virtual environment:
 
-python -m venv venv
-venv\Scripts\activate   # Windows
-source venv/bin/activate # Linux/macOS
+- python -m venv venv
+- venv\Scripts\activate   # Windows
+- source venv/bin/activate # Linux/macOS
 
 3. Install dependencies:
    
-pip install flask
+- pip install flask
 
 4. Add a 1x1 transparent pixel image named pixel.png inside the project root.
    
-##Running the App
-python -m flask --app email_guard.tracker:create_app run
-Access the dashboard at http://127.0.0.1:5000/
+### Running the App
+- python -m flask --app email_guard.tracker:create_app run
+- Access the dashboard at http://127.0.0.1:5000/
 
-##Use the tracking pixel URL in emails:
+- Use the tracking pixel URL in emails:
 http://127.0.0.1:5000/track_open?email_id=unique_email_id
 
-##Usage
-Embed the tracking pixel in your email HTML body like this:
+### Usage
+- Embed the tracking pixel in your email HTML body like this:
 <img src="http://your-domain-or-ngrok-url/track_open?email_id=recipient_unique_id" style="display:none;" alt="" />
 
-##How It Works
-The /track_open endpoint serves a 1x1 pixel image.
+### How It Works
+- The /track_open endpoint serves a 1x1 pixel image.
 
-When the recipient opens the email, the image is requested and the email ID and timestamp are saved in the database.
+- When the recipient opens the email, the image is requested and the email ID and timestamp are saved in the database.
 
-The / endpoint shows a styled dashboard listing recent email opens.
+- The / endpoint shows a styled dashboard listing recent email opens.
 
-##Future Enhancements
--Add scam detection for incoming/outgoing emails
+### Future Enhancements
+- Add scam detection for incoming/outgoing emails
 
--Support email delivery verification
+- Support email delivery verification
 
--User authentication and secure dashboard access
+- User authentication and secure dashboard access
 
--Pagination, filtering, and export options on dashboard
+- Pagination, filtering, and export options on dashboard
 
--Integrate with email sending scripts for automation
+- Integrate with email sending scripts for automation
 
-License
-MIT License © 2025 Extech
+### License
+- MIT License © 2025 Extech
 
-##Contact
-For questions or contributions, please open an issue or contact [extaciafakero@gmail.com].
-Would you like me to help generate a full `.gitignore` or CI/CD config next?
+### Contact
+- For questions or contributions, please open an issue or contact [extaciafakero@gmail.com].
+- Would you like me to help generate a full `.gitignore` or CI/CD config next?
